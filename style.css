@@ -1,0 +1,201 @@
+/* =====================================
+   ملف style.css لتنسيق بوابة الامتياز
+   ===================================== */
+
+/* 1. تنسيق الجسم (Body) بالكامل */
+body {
+    /* لون الخلفية الرمادي الفاتح جداً */
+    background-color: #F8F8F8; 
+    /* تحديد خط حديث وواضح */
+    font-family: 'Tajawal', Arial, sans-serif;
+    direction: rtl; 
+    margin: 0;
+    padding: 0; 
+}
+
+/* لتوسيط وتحديد عرض المحتوى وجعله مريحاً للقراءة */
+main, header, nav {
+    width: 90%;
+    max-width: 1000px; /* لتجنب التمدد المفرط على الشاشات الكبيرة */
+    margin: 20px auto;
+}
+
+/* 2. تنسيق العنوان الرئيسي والـ Header */
+header {
+    background-color: #FFFFFF; /* خلفية بيضاء لتمييز العنوان */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* ظل احترافي خفيف */
+    text-align: center; /* توسيط العنوان */
+}
+
+/* 3. تنسيق العناوين (H1 و H2) */
+h1, h2 {
+    color: #008080; /* الأزرق المخضر كلون أساسي */
+    border-bottom: 2px solid #e0f0f0; /* خط خفيف تحت العناوين */
+    padding-bottom: 10px;
+}
+
+/* 4. تنسيق قائمة التنقل (Nav) */
+nav {
+    background-color: #008080; /* شريط تنقل باللون الأساسي */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+    display: flex; 
+    flex-direction: row-reverse; /* لترتيب القائمة بشكل صحيح عربياً */
+}
+
+nav li a {
+    display: block;
+    text-decoration: none; 
+    color: #FFFFFF; /* نصوص بيضاء على خلفية زرقاء مخضرة */
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    background-color: #005f5f; /* لون أغمق عند المرور بالماوس */
+}
+
+/* 5. تنسيق المحتوى الرئيسي (Main) */
+main {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* تنسيق الروابط داخل المحتوى (Call to Action) */
+main a {
+    color: #008080; 
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 6. تنسيق القوائم لتبدو أجمل */
+ul, ol {
+    margin-right: 20px;
+    line-height: 1.6;
+}
+
+/* =====================================
+   تنسيق الصور (IMG)
+   ===================================== */
+
+.header-image {
+    /* هذه هي الخاصية الأهم لضمان أن الصورة لن تتجاوز عرض العنصر الحاوي لها */
+    max-width: 100%; 
+    /* لضمان أن ارتفاع الصورة يتناسب مع العرض، مع الحفاظ على نسب الأبعاد */
+    height: auto; 
+    /* إعطاء الصورة عرضاً ثابتاً ولكن مرناً */
+    width: 800px; 
+    /* لتوسيط الصورة في قسم الـ Header */
+    display: block; 
+    margin: 20px auto;
+    /* إضافة لمسة جمالية: حواف دائرية وظل خفيف */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
+}
+
+/* =====================================
+   تنسيق حقول النموذج (Forms)
+   ===================================== */
+
+/* تنسيق الحقول النصية ومساحات النص */
+input[type="text"], 
+input[type="email"],
+textarea {
+    width: 100%; /* اجعل الحقل يأخذ العرض الكامل للمساحة */
+    padding: 12px;
+    margin: 8px 0 16px 0; /* مسافات داخلية وخارجية */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* لضمان أن العرض 100% يشمل الـ padding */
+}
+
+/* تنسيق زر الإرسال ليتناسب مع لون الموقع */
+input[type="submit"] {
+    background-color: #008080; /* الأزرق المخضر */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #005f5f; /* تغيير اللون عند المرور بالماوس */
+}
+
+/* =====================================
+   تنسيق الجداول (Tables)
+   ===================================== */
+
+table {
+    width: 100%; /* اجعل الجدول يملأ عرض المحتوى */
+    border-collapse: collapse; /* لإزالة الفراغات بين خلايا الجدول */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    border: 1px solid #ddd; /* حدود خفيفة بين الخلايا */
+    padding: 12px;
+    text-align: center; /* توسيط النص داخل الخلايا */
+}
+
+/* تنسيق رؤوس الأعمدة */
+th {
+    background-color: #008080; /* الأزرق المخضر كلون للرأس */
+    color: white;
+    font-weight: bold;
+}
+
+/* تنسيق الصفوف: لون خلفية خفيف للصفوف الفردية لتحسين القراءة */
+tr:nth-child(even) {
+    background-color: #f2fafa; /* لون رمادي خفيف جداً يميل للأخضر المائل */
+}
+
+/* تنسيق عند المرور بالماوس على صف معين */
+tr:hover {
+    background-color: #e0f0f0;
+}
+
+/* =====================================
+   تنسيق التذييل (Footer)
+   ===================================== */
+footer {
+    /* لون خلفية غامق قليلاً عن الخلفية الرئيسية */
+    background-color: #333; 
+    /* لون النص أبيض ليظهر بوضوح */
+    color: #fff; 
+    /* توسيط النص داخله */
+    text-align: center; 
+    /* حشو داخلي (Padding) لجعل التذييل يبدو أضخم وأكثر وضوحاً */
+    padding: 20px 0;
+    /* خط أصغر قليلاً للوضوح */
+    font-size: 0.9em; 
+    /* التأكد من أن التذييل يظهر في أسفل الصفحة */
+    margin-top: 30px; 
+}
+
+/* تنسيق الروابط داخل التذييل (لإبقائها بيضاء) */
+footer a {
+    color: #e0f0f0; /* لون فاتح للروابط */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

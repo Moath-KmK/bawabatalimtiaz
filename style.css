@@ -41,6 +41,7 @@ nav {
     background-color: #008080; /* شريط تنقل باللون الأساسي */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+css display: flex; /* تحويل nav إلى حاوية مرنة */ justify-content: space-around; /* توزيع العناصر بالتساوي */ align-items: center; /* توسيط العناصر عموديًا */ flex-wrap: wrap; /* السماح بتعدد الأسطر */
 }
 
 nav ul {
@@ -279,4 +280,40 @@ section {
 section:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px); 
+}
+
+/* =====================================
+   استجابة الشاشات الصغيرة (Media Queries)
+   ===================================== */
+
+@media (max-width: 768px) {
+    /* عند عرض الموقع على شاشة عرضها 768 بكسل أو أقل (هاتف) */
+
+    /* 1. قائمة التنقل: جعل الروابط تتكدس عمودياً */
+    nav {
+        /* إجبار العناصر على أن تكون عمودية بدلاً من أفقية */
+        flex-direction: column; 
+    }
+
+    nav ul {
+        /* إجبار عناصر الـ UL (الروابط) على التكدس عمودياً */
+        flex-direction: column;
+        width: 100%; 
+        text-align: center; 
+    }
+    
+    nav a {
+        /* إضافة حدود للفصل بين الروابط العمودية */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+    
+    /* 2. المحتوى الرئيسي: إضافة حشو (Padding) أفضل للهواتف */
+    main {
+        padding: 10px;
+    }
+    
+    /* 3. الصورة: جعلها أصغر قليلاً على الهواتف */
+    .header-image {
+        width: 90% !important; 
+    }
 }

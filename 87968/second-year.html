@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة الصف الثاني الثانوي - دليل الابتعاث</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* أنميشن السلاسة الفخم حقنا */
+        @keyframes premiumFadeIn {
+            0% { opacity: 0; transform: translateY(30px) scale(0.98); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* هيدر بلون أحمر خفيف ناعم مع لمحة صفار هادئة */
+        header {
+            background-color: #fff1f1; /* أحمر خفيف باستيل مريح */
+            border-bottom: 2px solid #ffe4e4;
+            color: #721c24; /* كتابة عنابّية داكنة متناسقة */
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            animation: premiumFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 1.3rem;
+            color: #856404; /* لمحة صفار غامقة للنص الفرعي */
+            opacity: 0;
+            animation: premiumFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            animation-delay: 0.3s;
+        }
+
+        .container {
+            max-width: 1000px; /* وسعنا الحاوية عشان المربع الجانبي */
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* تقسيم الشاشة للمحتوى ومربع الـ AP الجانبي */
+            gap: 30px;
+        }
+
+        /* التوافق مع الجوالات (تخلي المربع الجانبي ينزل تحت بالكامل في الشاشات الصغيرة) */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .main-content-animation {
+            opacity: 0;
+            animation: premiumFadeIn 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            animation-delay: 0.6s;
+        }
+
+        .section-title {
+            color: #721c24;
+            border-bottom: 2px solid #fff1f1;
+            position: relative;
+            padding-bottom: 12px;
+            margin-top: 40px;
+            font-size: 1.6rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 60px;
+            height: 2px;
+            background-color: #721c24;
+        }
+
+        .suggestions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .suggestion-card {
+            background-color: #ffffff;
+            border: 2px solid #fff1f1;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 12px rgba(255, 241, 241, 0.3);
+            position: relative;
+        }
+
+        .suggestion-card:hover {
+            border-color: #ffcccc;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(255, 241, 241, 0.7);
+        }
+
+        /* تاغ "اختياري" المميز باللون الأصفر الخفيف */
+        .optional-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .suggestion-card h3 {
+            margin: 0 0 12px 0;
+            color: #721c24;
+            font-size: 1.25rem;
+        }
+
+        .suggestion-card p {
+            margin: 0;
+            line-height: 1.7;
+            font-size: 1rem;
+            color: #5d6d7e;
+        }
+
+        /* 🌟 المربع الجانبي لمواد الـ AP بلمسة صفار هادئة 🌟 */
+        .side-info-box {
+            background-color: #fffdf3; /* درجة صفار هادئة وخفيفة جداً */
+            border: 2px dashed #ffeeba;
+            border-right: 6px solid #ffc107;
+            border-radius: 12px;
+            padding: 25px;
+            height: fit-content;
+        }
+
+        .side-info-box h3 {
+            margin: 0 0 15px 0;
+            color: #856404;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .side-info-box ul {
+            margin: 0;
+            padding-right: 18px;
+            color: #66541e;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .side-info-box li {
+            margin-bottom: 8px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background-color: #721c24;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #511318;
+        }
+
+        footer {
+            background-color: #fff1f1;
+            color: #721c24;
+            text-align: center;
+            padding: 20px;
+            margin-top: 80px;
+            font-size: 0.9rem;
+            border-top: 1px solid #ffe4e4;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>خطة ثاني ثانوي الحاسمـة 🎯</h1>
+        <p>هذي السنة هي عمود الابتعاث الفقري.. ركز واعرف وش المطلوب منك!</p>
+    </header>
+
+    <!-- المحتوى والأنميشن -->
+    <div class="container main-content-animation">
+        
+        <!-- المحتوى الرئيسي (اليمين) -->
+        <div>
+            <h2 class="section-title">ترم أول: شد حيلك بالقدرات 🔥</h2>
+            <div class="suggestions-grid">
+                <div class="suggestion-card">
+                    <h3>اختبار القدرات 🎯</h3>
+                    <p>هذا الترم لازم تحط كل ثقلك وتخلص من القدرات وتجيب الدرجة اللي في بالك عشان ترتاح. لا تأجل لترم ثاني لأن الضغط بيزيد عليك!</p>
+                </div>
+                <div class="suggestion-card">
+                    <h3>المحافظة على التراكمي 📈</h3>
+                    <p>المعدل ثم المعدل! مواد ثاني ثانوي دسمة، فاحرص إنك ما تضيع درجات أعمال السنة أو الاختبارات الدورية عشان تراكمي الـ 3 سنين يضل فوق.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title">ترم ثاني: تجهيز لغة واختبارات دولية 🌍</h2>
+            <div class="suggestions-grid">
+                <div class="suggestion-card">
+                    <h3>اختبار السات (SAT) ✍️</h3>
+                    <p>جاء وقت الجد! في الترم الثاني ابدأ اختبر سات (SAT) أو الاستعداد القوي له إذا كانت جامعاتك المستهدفة بأمريكا تطلبه كشرط أساسي لملفك الأكاديمي.</p>
+                </div>
+                <div class="suggestion-card">
+                    <h3>التجهيز للأيلتس (IELTS) 🗣️</h3>
+                    <p>ابدأ من الحين حل نماذج واختبارات تجريبية للأيلتس أو التوفل، التأسيس في هذا الترم بيخليك تدخل الاختبار في بداية ثالث ثانوي وأنت ضامن الـ +7 بإذن الله.</p>
+                </div>
+                <div class="suggestion-card">
+                    <span class="optional-tag">اختياري</span>
+                    <h3>معارض دولية (آيتكس / ريجينيرون) 🔬</h3>
+                    <p>لو عندك مشروع بحثي أو ابتكار قوي، حاول تشارك وتتأهل للمعارض الدولية مثل آيتكس (ITEX) أو معرض آيسف الدولي. مجرد المشاركة أو الفوز يخلي الجامعات العالمية تتنافس عليك!</p>
+                </div>
+                <div class="suggestion-card">
+                    <span class="optional-tag">اختياري</span>
+                    <h3>التبادل الطلابي والبرامج الإثرائية ✈️</h3>
+                    <p>قدم على برامج الصيف الإثرائية التابعة لموهبة أو مسك (مثل برامج الجامعات العالمية). هذي تعطيك تجربة رهيبة وتكتبها في سيرتك الذاتية بقوة.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🌟 المربع الجانبي لمواد الـ AP (اليسار) 🌟 -->
+        <div class="side-info-box">
+            <h3>💡 وش سالفة مواد الـ AP؟</h3>
+            <p style="font-size: 0.95rem; margin: 0 0 15px 0; line-height: 1.6; color: #5d6d7e;">هي مواد بمستوى جامعي (Advanced Placement) تقدر تدرسها وتختبرها اختيارياً عشان تثبت للجامعات برا إنك طالب عبقري وتتحمل المواد الصعبة!</p>
+            
+            <strong style="color: #856404; font-size: 1rem; display:block; margin-bottom:10px;">أبرز مجالات الـ AP المقترحة:</strong>
+            <ul>
+                <li><strong>العلوم:</strong> (AP Physics, AP Chemistry, AP Biology)</li>
+                <li><strong>الرياضيات والحاسب:</strong> (AP Calculus BC, AP Computer Science)</li>
+                <li><strong>العلوم الإنسانية:</strong> (AP Microeconomics, AP English)</li>
+            </ul>
+            <p style="font-size: 0.85rem; margin-top: 15px; color: #856404; font-weight: bold;">💡 تلميحة: يفضل تختار مادتين تناسب تخصصك المستقبلي!</p>
+        </div>
+
+    </div>
+
+    <center>
+        <a href="index.html" class="back-btn">⬅️ ارجع للرئيسية</a>
+    </center>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © دليل الابتعاث 2026</p>
+    </footer>
+
+</body>
+</html>

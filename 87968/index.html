@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الابتعاث الخطوة بخطوة</title>
+    <style>
+        /* إعدادات الألوان والتنسيق العام */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #1a2a3a;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* محرك الأنميشن الاحترافي السلس */
+        @keyframes premiumFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.98);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* رأس الصفحة (الواجهة الكحلية) */
+        header {
+            background-color: #0b1d33;
+            color: #ffffff;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            animation: premiumFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        header p {
+            margin: 20px 0 0 0;
+            font-size: 1.4rem;
+            opacity: 0;
+            animation: premiumFadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            animation-delay: 0.3s;
+        }
+
+        /* الحاوية الرئيسية للمحتوى */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* أنميشن تدريجي لكامل المحتوى */
+        .main-content-animation {
+            opacity: 0;
+            animation: premiumFadeIn 1.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            animation-delay: 0.6s;
+        }
+
+        /* قسم العناوين */
+        .section-title {
+            color: #0b1d33;
+            border-bottom: 2px solid #e0e6ed;
+            position: relative;
+            padding-bottom: 12px;
+            margin-top: 50px;
+            font-size: 1.8rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 80px;
+            height: 2px;
+            background-color: #0b1d33;
+        }
+
+        /* تنسيق أزرار اختيار السنة الدراسية */
+        .years-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .year-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .year-card {
+            background-color: #ffffff;
+            border: 2px solid #0b1d33;
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #0b1d33;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 12px rgba(11, 29, 51, 0.04);
+        }
+
+        .year-card:hover {
+            background-color: #0b1d33;
+            color: #ffffff;
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(11, 29, 51, 0.15);
+        }
+
+        /* قسم النصائح العامّة */
+        .tips-box {
+            background-color: #f4f7fa;
+            border-right: 6px solid #0b1d33;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+        }
+
+        .tips-box ul {
+            margin: 20px 0 0 0;
+            padding-right: 20px;
+        }
+
+        .tips-box li {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* تنسيق أزرار القنوات والمجموعات */
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .channel-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border: 2px solid #0b1d33;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: #0b1d33;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 12px rgba(11, 29, 51, 0.04);
+            text-align: center;
+        }
+
+        .channel-btn span {
+            font-size: 0.95rem;
+            font-weight: normal;
+            color: #546e7a;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        .channel-btn:hover {
+            background-color: #f4f7fa;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(11, 29, 51, 0.12);
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #0b1d33;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 80px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>بوابة الابتعاث الرقمية</h1>
+        <p>مستقبلك الأكاديمي يبدأ من التخطيط الصحيح في المرحلة الثانوية</p>
+    </header>
+
+    <div class="container main-content-animation">
+
+        <!-- قسم اختيار السنة الدراسية -->
+        <h2 class="section-title">اختر سنتك الدراسية الحالية:</h2>
+        <div class="years-grid">
+            <a href="first-year.html" class="year-link">
+                <div class="year-card">الصف الأول الثانوي</div>
+            </a>
+            <a href="second-year.html" class="year-link">
+                <div class="year-card">الصف الثاني الثانوي</div>
+            </a>
+            <a href="third-year.html" class="year-link">
+                <div class="year-card">الصف الثالث الثانوي</div>
+            </a>
+        </div>
+
+        <!-- قسم نصائح عامة للابتعاث -->
+        <h2 class="section-title">نصائح ذهبية للمرحلة الثانوية:</h2>
+        <div class="tips-box">
+            <p style="font-size: 1.2rem; color: #0b1d33;"><strong>أهم الأشياء اللي لازم تركز عليها عشان تضمن ابتعاثك:</strong></p>
+            <ul>
+                <li><strong>المعدل التراكمي:</strong> حافظ على درجات عالية ومعدل تراكمي متميز ومستقر.</li>
+                <li><strong>الاختبارات المعيارية:</strong> حاول تنتهي من اختبار السات (SAT) أو الاختبار المطلوب من الجامعة بدري (يفضل قبل ثالث ثانوي).</li>
+                <li><strong>اللغة الإنجليزية:</strong> حاول يومياً تمارس اللغة عشان تقدر تقفل اختبارات اللغة (IELTS/TOEFL) في ثالث ثانوي بكل سهولة.</li>
+                <li><strong>الأنشطة اللاصفية:</strong> شارك في برامج، تطوع، ومسابقات تثبت شغفك العلمي والابداعي وتثري ملفك.</li>
+            </ul>
+        </div>
+
+        <!-- قسم مجتمعاتنا الرقمية المربوط بالروابط الحقيقية -->
+        <h2 class="section-title">مجتمعاتنا الرقمية وقنواتنا 📢</h2>
+        <div class="channels-grid">
+            
+            <!-- 🌟 زر قناة وقروب الابتعاث العامة المحدث 🌟 -->
+            <a href="https://t.me/abtieath" target="_blank" class="channel-btn">
+                📢 دليلك للابتعاث للجامعات العالمية
+                <span>انضم لقناتنا العامة لمناقشة شروط الابتعاث، الاستفسارات، ومشاركة الخبرات مع زملائك الطلاب!</span>
+            </a>
+
+            <!-- 🌟 زر قناة طريقك نحو جامعة MIT المحدث 🌟 -->
+            <a href="https://t.me/MIT_university_1" target="_blank" class="channel-btn">
+                🎓 طريقك نحو جامعة MIT
+                <span>قناتي الشخصية لرحلة التقديم على معهد ماساتشوستس للتكنولوجيا (MIT) خطوة بخطوة وكل كواليسها!</span>
+            </a>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © دليل الابتعاث 2026</p>
+    </footer>
+
+</body>
+</html>

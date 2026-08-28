@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الابتعاث الخطوة بخطوة</title>
+    <style>
+        /* إعدادات الألوان والتنسيق العام */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #1a2a3a;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* تأثير الأنيميشن (Fade In) */
+        @keyframes fadeInEffect {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* يبدأ من الأسفل قليلاً */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* يستقر في مكانه الطبيعي */
+            }
+        }
+
+        /* تطبيق الأنيميشن على واجهة الموقع */
+        .hero-animation {
+            animation: fadeInEffect 1.5s ease-out; /* يستغرق ثانية ونصف */
+        }
+
+        /* رأس الصفحة (الواجهة الكحلية) */
+        header {
+            background-color: #0b1d33;
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+        }
+
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* الحاوية الرئيسية للمحتوى */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* قسم اختيار السنة الدراسية والنصائح */
+        .section-title {
+            color: #0b1d33;
+            border-bottom: 3px solid #0b1d33;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            font-size: 1.8rem;
+        }
+
+        /* تنسيق أزرار اختيار السنة الدراسية */
+        .years-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .year-card {
+            background-color: #ffffff;
+            border: 2px solid #0b1d33;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #0b1d33;
+            transition: all 0.3s ease;
+        }
+
+        /* تأثير عند مرور الماوس على السنة الدراسية (تتحول للكحلي والنص أبيض) */
+        .year-card:hover {
+            background-color: #0b1d33;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* قسم النصائح العامّة */
+        .tips-box {
+            background-color: #f4f7fa; /* درجة خفيفة جداً من الكحلي/الرمادي لتفتيح الخلفية */
+            border-right: 5px solid #0b1d33; /* خط كحلي سميك على اليمين */
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .tips-box ul {
+            margin: 10px 0 0 0;
+            padding-right: 20px;
+        }
+
+        .tips-box li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #0b1d33;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- رأس الصفحة مع كلاس الأنيميشن -->
+    <header class="hero-animation">
+        <h1>بوابة الابتعاث الرقمية</h1>
+        <p>مستقبلك الأكاديمي يبدأ من التخطيط الصحيح في المرحلة الثانوية</p>
+    </header>
+
+    <div class="container">
+
+        <!-- قسم اختيار السنة الدراسية -->
+        <h2 class="section-title">اختر سنتك الدراسية الحالية:</h2>
+        <div class="years-grid">
+            <div class="year-card">الصف الأول الثانوي</div>
+            <div class="year-card">الصف الثاني الثانوي</div>
+            <div class="year-card">الصف الثالث الثانوي</div>
+        </div>
+
+        <!-- قسم نصائح عامة للابتعاث -->
+        <h2 class="section-title">نصائح ذهبية للمرحلة الثانوية:</h2>
+        <div class="tips-box">
+            <p><strong>عزيزي الطالب، الطريق إلى الابتعاث يبدأ مبكراً. إليك أهم ما يجب التركيز عليه:</strong></p>
+            <ul>
+                <li><strong>المعدل التراكمي:</strong> حافظ على أعلى درجة ممكنة، فالمعدل هو مفتاحك الأول للقبول.</li>
+                <li><strong>اختبارات قياس:</strong> ابدأ الاستعداد مبكراً لاختبارات القدرات والتحصيلي ولا تؤجلها للفرص الأخيرة.</li>
+                <li><strong>اللغة الإنجليزية:</strong> خصص وقتاً يومياً لتطوير مهاراتك لتجتاز اختبارات الـ IELTS أو TOEFL بسهولة لاحقاً.</li>
+                <li><strong>الأنشطة اللاصفية:</strong> المشاركة في التطوع والمسابقات (مثل إبداع) تعزز ملفك الشخصي عند التقديم.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © دليل الابتعاث 2026</p>
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الابتعاث الخطوة بخطوة</title>
+    <style>
+        /* إعدادات الألوان والتنسيق العام */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #1a2a3a;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* تأثير الأنيميشن (Fade In) */
+        @keyframes fadeInEffect {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* يبدأ من الأسفل قليلاً */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* يستقر في مكانه الطبيعي */
+            }
+        }
+
+        /* تطبيق الأنيميشن على واجهة الموقع */
+        .hero-animation {
+            animation: fadeInEffect 1.5s ease-out; /* يستغرق ثانية ونصف */
+        }
+
+        /* رأس الصفحة (الواجهة الكحلية) */
+        header {
+            background-color: #0b1d33;
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+        }
+
+        header p {
+            margin: 15px 0 0 0;
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* الحاوية الرئيسية للمحتوى */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* قسم اختيار السنة الدراسية والنصائح */
+        .section-title {
+            color: #0b1d33;
+            border-bottom: 3px solid #0b1d33;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            font-size: 1.8rem;
+        }
+
+        /* تنسيق أزرار اختيار السنة الدراسية */
+        .years-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .year-card {
+            background-color: #ffffff;
+            border: 2px solid #0b1d33;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #0b1d33;
+            transition: all 0.3s ease;
+        }
+
+        /* تأثير عند مرور الماوس على السنة الدراسية (تتحول للكحلي والنص أبيض) */
+        .year-card:hover {
+            background-color: #0b1d33;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* قسم النصائح العامّة */
+        .tips-box {
+            background-color: #f4f7fa; /* درجة خفيفة جداً من الكحلي/الرمادي لتفتيح الخلفية */
+            border-right: 5px solid #0b1d33; /* خط كحلي سميك على اليمين */
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .tips-box ul {
+            margin: 10px 0 0 0;
+            padding-right: 20px;
+        }
+
+        .tips-box li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #0b1d33;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- رأس الصفحة مع كلاس الأنيميشن -->
+    <header class="hero-animation">
+        <h1>بوابة الابتعاث الرقمية</h1>
+        <p>مستقبلك الأكاديمي يبدأ من التخطيط الصحيح في المرحلة الثانوية</p>
+    </header>
+
+    <div class="container">
+
+        <!-- قسم اختيار السنة الدراسية -->
+        <h2 class="section-title">اختر سنتك الدراسية الحالية:</h2>
+        <div class="years-grid">
+            <div class="year-card">الصف الأول الثانوي</div>
+            <div class="year-card">الصف الثاني الثانوي</div>
+            <div class="year-card">الصف الثالث الثانوي</div>
+        </div>
+
+        <!-- قسم نصائح عامة للابتعاث -->
+        <h2 class="section-title">نصائح ذهبية للمرحلة الثانوية:</h2>
+        <div class="tips-box">
+            <p><strong>عزيزي الطالب، الطريق إلى الابتعاث يبدأ مبكراً. إليك أهم ما يجب التركيز عليه:</strong></p>
+            <ul>
+                <li><strong>المعدل التراكمي:</strong> حافظ على أعلى درجة ممكنة، فالمعدل هو مفتاحك الأول للقبول.</li>
+                <li><strong>اختبارات قياس:</strong> ابدأ الاستعداد مبكراً لاختبارات القدرات والتحصيلي ولا تؤجلها للفرص الأخيرة.</li>
+                <li><strong>اللغة الإنجليزية:</strong> خصص وقتاً يومياً لتطوير مهاراتك لتجتاز اختبارات الـ IELTS أو TOEFL بسهولة لاحقاً.</li>
+                <li><strong>الأنشطة اللاصفية:</strong> المشاركة في التطوع والمسابقات (مثل إبداع) تعزز ملفك الشخصي عند التقديم.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © دليل الابتعاث 2026</p>
+    </footer>
+
+</body>
+</html>
